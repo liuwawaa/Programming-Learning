@@ -15,14 +15,14 @@ let myHeading = document.querySelector("h1");
 function setUserName() {
     let myName = prompt("请输入你的名字。");
     localStorage.setItem("name", myName);
-    myHeading.textContent = "Welcome to my website!，" + myName;
+    myHeading.textContent = "Welcome to my website!" + myName;
   }
   
   if (!localStorage.getItem("name")) {
     setUserName();
   } else {
     let storedName = localStorage.getItem("name");
-    myHeading.textContent = "Welcome to my website!，" + storedName;
+    myHeading.textContent = "Welcome to my website!" + storedName;
   }
   
   myButton.onclick = function () {
